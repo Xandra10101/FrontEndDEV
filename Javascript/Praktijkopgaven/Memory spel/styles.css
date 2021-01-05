@@ -1,0 +1,24 @@
+#memory_board{
+	background:lightgray;
+	border:#999 1px solid;
+	width:950px;
+	height:550px;
+	padding:24px;
+	margin:0px auto;
+	position: fixed;
+		top: 10px;
+		left: 10px;
+}
+#memory_board{
+	background: url(img/js-badge.svg) no-repeat;
+	background-position: center;
+	border:#000 1px solid;
+	width:70px;
+	height:70px;
+	float:left;
+	margin:10px;
+	padding:20px;
+	font-size:64px;
+	cursor:pointer;
+	text-align:center;
+}

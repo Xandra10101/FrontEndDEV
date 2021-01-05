@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<html lang='eng'>
+	<head>
+	<meta charset="UTF-8">
+    	<title>Oef 4</title>
+    	<script>
+	        var w = new Array();
+	        w[0] = new Array();
+	        w[0]['mnd'] = '01';
+	        w[0]['VyP'] = 4;
+	        w[0]['H3e'] = 13;
+	        w[0]['corr'] = 2;
+	        w[1] = new Array();
+	        w[1]['mnd'] = '02';
+	        w[1]['VyP'] = 5;
+	        w[1]['H3e'] = 11;
+	        w[1]['corr'] = 1;
+	        w[2] = new Array();
+	        w[2]['mnd'] = '03';
+	        w[2]['VyP'] = 3;
+	        w[2]['H3e'] = 16;
+	        w[2]['corr'] = 2;
+	        // hier mag jij nu verder
+
+	        // als VyP niet 1 tot 10 is of H3e10 tot 20 is dan
+	        function controleerWaarde(x, y){
+	        	var datum_controle = document.getElementById('datum').innerHTML;
+	        		var i;
+	        		var uitkomst_vyp, uitkomst_h3e;
+	        		var eindresultaat = uitkomst_vyp + uitkomst_h3e;
+	        	if((x >= 0 && x <= 10) || (y >= 11 && x <= 20)){
+	        		for(i=0;i <w.length;i++){
+	        			if(datum_controle.substr(3,2) == w[i]['mnd']){
+	        				if(x > w[i]['VyP']){
+	        					var uitkomst_vyp = w[i]['VyP'] - x;
+	        				}else if(x < w[i]['VyP']){
+	        					var uitkomst_vyp = w[i]['VyP'] + x; 
+	        				}
+	        			}else{
+	        				if(x > w[i]['H3e']){
+	        					var uitkomst_h3e = w[i]['H3e'] - x;
+	        				}else if(x < w[i]['H3e']){
+	        					var uitkomst_h3e = w[i]['H3e'] + x; 
+	        			}
+	        			
+	        		}return eindresultaat;
+	        		
+	        	}else{
+	        		break;
+	        	}
+	        }
+
+
+	        var result = document.getElementById('uitkomst').innerHTML;
+    	</script>
+	</head>
+	<body>
+		<label>VyP:<label> <input type='text' id='VyP'><br>
+		H3e: <input type="text" id="H3e"><br>
+		Datum (dd-mm-yyyy): <input type="text" id="datum"><br>
+		<div onmouseover=this.style.cursor='pointer'>Controleer</div><br>
+		Uitkomst: <div id="uitkomst"></div>
+	</body>
+</html>

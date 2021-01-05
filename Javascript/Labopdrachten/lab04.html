@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang = "nl">
+	<head>
+		<meta charset = "UTF-8">
+		<title> lab 04 </title>
+	</head>
+	<body>
+		<script>
+			// var rood = 'palet1' in kleurenpalet;
+			// var kleurenpalet = [];
+			// palet['kleur1'] = {'rood'};
+			// palet['kleur2'] = {'geel'};
+			// palet['kleur3'] = {'groen'};
+			// palet['kleur4'] = {'blauw'};
+			// palet['kleur5'] = {'zwart'};
+			kleurenpalet = new Array('rood', 'geel', 'groen', 'blauw', 'zwart');
+			var nieuwekleur = prompt('Typ hier een nieuwe kleur in: ')
+			kleurenpalet.unshift(nieuwekleur);
+			kleurenpalet1 = kleurenpalet.splice(2,3);
+			document.write('<br> kleurenpalet is ' + kleurenpalet);
+			document.write('<br> kleurenpalet1 is ' + kleurenpalet1);
+		</script>
+	</body>
+</html>

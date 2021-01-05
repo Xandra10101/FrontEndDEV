@@ -1,0 +1,42 @@
+.icon-bar {
+    width: 100%;
+    background-color: #555;
+    overflow: auto;
+}
+
+.icon-bar a {
+    float: left;
+    width: 20%;
+    text-align: center;
+    padding: 12px 0;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 36px;
+}
+
+.icon-bar a:hover {
+    background-color: #000;
+}
+
+.active {
+    background-color: #4CAF50;
+}
+.afbeelding{
+	width: 450px;
+	height: 500px;
+	position: absolute;
+	left: 100px;
+	top: 100px;
+	animation-name: draaien;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+}
+@keyframes draaien{
+	from {transform: rotateX(0deg);}
+	to {transform: rotateX(360deg);}
+}
+
+img{
+	filter:invert(100%);
+	float: center;
+}

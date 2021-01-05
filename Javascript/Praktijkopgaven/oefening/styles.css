@@ -1,0 +1,14 @@
+img{
+	background-image: url(images/coffee-business.jpg);
+	-webkit-filter: invert(100%);
+	filter: invert();
+	background-repeat: infinite;
+}
+
+table{
+	position: fixed;
+}
+
+a{
+	text-decoration: none;
+}

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<link rel="icon" sizes="16x16" href="favicon.ico" type="image/ico">
+	<title> Memory game</title>
+<style>
+*{
+	font-family: Georgia, serif;
+}
+body{
+	background: url(https://res.cloudinary.com/nikola1970/image/upload/v1456692130/body-bg_ovz9eo.png) no-repeat;
+	
+}
+div#memory_board{
+	background:linear-gradient(#9FB3B5, #E3E9EA, #7C9799);
+	border: #999 1px solid;
+	width: 65%;
+	max-width: 90%;
+	height: auto;
+	padding:20px;
+	margin:0px auto;
+	position: fixed;
+		top: 10px;
+		left: 10px;
+}
+div#memory_board > div{
+	background: url(img/backbone.svg) no-repeat;
+	background-position: center;
+	border:#000 1px solid;
+	width:70px;
+	height:70px;
+	float:left;
+	margin:15px;
+	padding:20px;
+	font-size:45px;
+	cursor:pointer;
+	text-align:center;
+}
+div.game-information{
+	background-color: lightblue;
+	border: #999 1px solid;
+	width: 25%;
+	max-width: 35%;
+	height: auto;
+	position: relative;
+		top: 50px;
+		right: 25px;
+	margin: auto;
+	float: right;
+}
+h1, h2{
+	text-transform: uppercase;
+	font-size: 20px;
+	text-align: center;
+}
+button{
+	padding: 5%;
+    font-size: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 10%;
+    border: none;
+}
+label{
+	width: 39%;
+	max-width: 50%; 
+	margin: 30px;
+
+}
+input[type='number']{
+	width: 40%;
+	max-width: 50%; 
+}
+
+</style>
+<script>
+// http://www.youtube.com/watch?v=c_ohDPWmsM0
+var memory_array = ['A','A','B','B','C','C','D','D','E','E','F','F','G','G','H','H','I','I','J','J','K','K','L','L','M','M','N','N'];
+var memory_values = [];
+var memory_tile_ids = [];
+var tiles_flipped = 0;
+var score_player1 = 0;
+var score_player2 = 0;
+const Player1 = 0;
+const Player2 = 1;
+Array.prototype.memory_tile_shuffle = function(){
+    var i = this.length, j, temp;
+    while(i-- > 0){
+        j = Math.floor(Math.random() * (i+1));
+        temp = this[j];
+        this[j] = this[i];
+        this[i] = temp;
+    }
+}
+function newBoard(){
+	tiles_flipped = 0;
+	var output = '';
+    memory_array.memory_tile_shuffle();
+	for(var i = 0; i < memory_array.length; i++){
+		output += '<div id="tile_'+i+'" onclick="memoryFlipTile(this,\''+memory_array[i]+'\')"></div>';
+	}
+	document.getElementById('memory_board').innerHTML = output;
+}
+function clearScore(){
+	document.getElementById("score_player1").value == "";
+	document.getElementById("score_player2").value == "";
+}
+function updateScorePlayer1(){
+	score_player1 += 1;
+	document.getElementById('score_player1').value = score_player1;
+}
+function updateScorePlayer2(){
+	score_player2 += 1;
+	document.getElementById('score_player2').value = score_player2;
+}
+
+
+function memoryFlipTile(tile,val){
+	if(tile.innerHTML == "" && memory_values.length < 2){
+		tile.style.background = '#ccc';
+		tile.innerHTML = val;
+		if(memory_values.length == 0){
+			memory_values.push(val);
+			memory_tile_ids.push(tile.id);
+		} else if(memory_values.length == 1){
+			memory_values.push(val);
+			memory_tile_ids.push(tile.id);
+			if(memory_values[0] == memory_values[1]){
+				tiles_flipped += 2;
+				updateScorePlayer1();
+				// updateScorePlayer2();
+				// Clear both arrays
+				memory_values = [];
+            	memory_tile_ids = [];
+				// Check to see if the whole board is cleared
+				if(tiles_flipped == memory_array.length){
+					alert("Board cleared... generating new board. You have won!");
+					document.getElementById('memory_board').innerHTML = "";
+					newBoard();
+					clearScore();
+				}
+			} else {
+				function flip2Back(){
+				    // Flip the 2 tiles back over
+				    var tile_1 = document.getElementById(memory_tile_ids[0]);
+				    var tile_2 = document.getElementById(memory_tile_ids[1]);
+				    tile_1.style.background = "url(img/backbone.svg) no-repeat";
+				    tile_1.style.backgroundPosition = "center";
+            	    tile_1.innerHTML = "";
+				    tile_2.style.background = "url(img/backbone.svg) no-repeat";
+				    tile_2.style.backgroundPosition = "center";
+            	    tile_2.innerHTML = "";
+				    // Clear both arrays
+				    memory_values = [];
+            	    memory_tile_ids = [];
+				}
+				setTimeout(flip2Back, 2000);
+			}
+		}
+	}
+}
+
+
+</script>
+</head>
+<body>
+<div id="memory_board"></div>
+<div class="col-lg-4">
+	<div class="game-information">
+		<header>
+			<h2>Characters Memory</h2>
+		</header>
+		<label for="score_player1">Score Player1: </label>
+		<input id="score_player1" type="number" value="0"> <br>
+		<label for="score_player2">Score Player2: </label>
+		<input id="score_player_2" type="number" value="0"> <br>
+		<button onclick="newBoard()">New Game</button>
+		<button onclick="clearScore()">Clear Score</button>
+	</div>
+</div>
+<script>newBoard();</script>
+</body>
+</html>
+

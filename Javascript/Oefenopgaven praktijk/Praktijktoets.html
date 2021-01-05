@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang = "nl">
+	<head>
+		<meta charset = "UTF-8">
+		<title> Praktijktoets Javascript </title>
+	</head>
+	<body>
+		<script>
+			var Onderbroeken = new Array("2,37", "7,93", "22,74");
+			var datum = Date.now();
+			var totaalbedrag = 0;
+			var onderbroekkeuze = prompt("Maak een keuze tussen de 1 tot 3 uit ons assortiment");
+			var hoeveelheid = prompt("Hoeveel onderbroeken wilt u aanschaffen?");
+			var woonplaats = prompt("Wat is uw huidige woonplaats?");
+			if(datum >= 24){
+				var bedrag_datum = Onderbroeken[onderbroekkeuze] * 0.02;
+			}
+			if(woonplaats == "Amsterdam"){
+				var bedrag_woonplaats = Onderbroeken[onderbroekkeuze] * 0.05;
+			}
+			var basisbedrag = Onderbroeken[onderbroekkeuze]; 
+			var BTW = basisbedrag * 0.21;
+			var totaalbedrag = bedrag_woonplaats + bedrag_datum + basisbedrag + BTW;
+			document.write("Uw keuze valt op: " +onderbroekkeuze);
+			document.write("<br>U heeft " + hoeveelheid + " onderbroek(en) besteld");
+			document.write("<br>Het totaalbedrag is " + totaalbedrag + " inclusief " + BTW + " BTW")
+		</script>
+	</body>
+</html>

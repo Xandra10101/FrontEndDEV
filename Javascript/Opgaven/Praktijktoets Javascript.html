@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang = "nl">
+	<head>
+		<meta charset = "UTF-8">
+		<title> Praktijktoets Javascript </title>
+	</head>
+	<body>
+		<script>
+			document.write("<br> Welkom bij deze applicatie");
+
+			var studieschuldPersoon = ["Jan Jansen", "€2000", "2017"];
+			var keuzemenu = parseInt(prompt("Maak een keuze (1, 2, 3, of 4)"));
+			var studieschuld = 2000;
+			var rentepercentage = parseInt(prompt("Voer hier uw rentepercentage in: "));
+			// studieschuld met rente berekenen
+			if (keuzemenu ===  1){
+				var schuldMetRente = studieschuld * rentepercentage;
+			}
+			// verwijderen van een rij
+			else if(keuzemenu == 2){
+				delete studieschuldPersoon[1];
+				delete studieschuldPersoon[2];
+			}
+			// toevoegen van een rij
+			else if(keuzemenu == 3){
+				studieschuldPersoon.push(prompt('Voer hier een nieuw studieschuld in: '));
+				studieschuldPersoon.push(prompt('Voer hier het studieschuld jaartal in: '));
+				alert("Deze volgende gegevens zijn toegevoegd: ");
+			}
+			//overzicht studieschulden
+			else{
+				document.write(studieschuldPersoon);
+			}			
+			document.write("<br> De schuld excl. rente van dit jaar is"  + schuldZonderRente);
+			document.write("<br> De totale schuld incl. rente is: " + schuldMetRente);
+		</script>
+	</body>
+</html>

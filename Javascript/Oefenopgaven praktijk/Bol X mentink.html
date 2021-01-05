@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang = "nl">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="discription" content="bol.com opdracht">
+		<link rel="stylesheet" href="">
+		<title>Bol.com</title>
+	</head>
+	<body>
+		<script>
+			var temperatuur = "";
+			temperatuur = prompt("Voer hier de temperatuur van vandaag in: " );
+			if(temperatuur <= 10){
+				document.write("de temperatuur is: " + temperatuur.fontcolor("blue"));
+			}
+			else if(temperatuur > 10 && temperatuur < 20){
+				document.write("de temperatuur is: " + temperatuur.fontcolor("yellow"));
+			}
+			else{
+				document.write("de temperatuur is: " + temperatuur.fontcolor("red"));
+			}
+			var vandaag = new Date();
+			document.write("<br>datum van vandaag is: " + vandaag);
+			var tijd = vandaag.getHours();
+			if(tijd >= 7 && tijd <= 12){
+				document.write("<br>Goedemorgen");
+			}
+			else if(tijd >= 12 && tijd <= 18){
+				document.write("<br>Goedemiddag");
+			}
+			else if(tijd >= 18 && tijd <= 0){
+				document.write("<br>Goedeavond");
+			}
+			else{
+				document.write("<br>Goedenacht");
+			}
+			var december = vandaag.getMonth();
+			if (december == 11){
+				document.write("<br>Kerstballen")
+			}
+
+		</script>
+	</body>
+</html>

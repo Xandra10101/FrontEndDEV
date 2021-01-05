@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <title>Praktijktoets 2</title>
+<script>
+    // maak hier een 2-dimensionele array aan
+    // in 1e dimensie (de rijen) 0 t/m 2
+    // in 2e dimensie 'naam' en 'prijs'
+    // zie de opdracht voor de namen en prijzen
+    var btw = 0.21;
+    var prijslijst = [
+        ["zwart", 10],
+        ["grijs", 12],
+        ["wit", 15]
+    ];
+    var aantalRamen = document.getElementById("aantal_ramen").value;
+    var keuzeWasbeurt = document.getElementById("hoe_afrekenen").value;
+    // hier moet je een functie schrijven, waarnaar toe wordt gesprongen na een klik op de button hieronder
+    function berekenPrijsWasbeurt(aantalRamen, prijijst){
+        for(var i=0;i < prijslijst.length;i++){
+            if(prijslijst[i][0] == keuzeWasbeurt){
+                var bedrag = aantalRamen * btw * prijslijst[i][0];
+                return bedrag;
+            }else if(prijslijst[i][1] == keuzeWasbeurt){
+                bedrag = aantalRamen * btw * prijslijst[i][1];
+                return bedrag;
+            }else{
+                bedrag = aantalRamen * btw * prijslijst[i][2];
+                return bedrag;
+            }
+        }
+        return bedrag;
+    }
+</script>
+</head>
+<body>
+Welkom op de site van de grote WitWasser!<br>
+<br>
+Kies hoe u het ramenwassen wilt afrekenen:<br>
+<select id="hoe_afrekenen">
+    <option value="0">Zwart</option>
+    <option value="1">Grijs</option>
+    <option value="2">Wit</option>
+</select><br>
+<br>
+Aantal ramen:<br>
+<input type="text" id="aantal_ramen" value=""><br>
+<br>
+<!-- in de button moet je een event toevoegen om naar de functie te springen -->
+<input type="button" value="Bereken prijs" onclick="berekenPrijsWasbeurt(aantalRamen, prijslijst)"><br>
+<br>
+<!-- in het volgende element moet de prijs worden getoond -->
+De prijs is: <span id="bedrag"></span> Euro
+</body>
+</html>
