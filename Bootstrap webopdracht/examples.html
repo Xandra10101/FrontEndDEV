@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="eng">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="styles.css">
+      <link href="css/bootstrap.css" rel="stylesheet">
+      <link rel="icon" sizes="16x16" href="favicon-16x16.png" type="Images/ico">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+      <title>Opdracht Bootstrap WEB</title>
+   </head>
+   <body>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+         <a class="navbar-brand" href="#">
+         <img src="alfa-college.png" width="50" height="50" alt="logo alfa-college">
+         </a>
+         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+         <span class="navbar-toggler-icon"></span>
+         </button>
+         <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+               <li class="nav-item">
+                  <a class="nav-link" href="index.html">Home</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="advantages.html">Advantages</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="Disadvantages.html">Disadvantages</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="manuals.html">Guide</a>
+               </li>
+               <li class="nav-item active">
+                  <a class="nav-link" href="examples.html">Examples <span class="sr-only">(current)</span></a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link" href="faq.html">FAQ</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+               <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+               <button class="btn btn-outline-danger my-2 my-sm-0" type="submit">Search</button>
+             </form>
+         </div>
+      </nav>
+      <div class="accordion" id="accordionExample">
+      <div class="card">
+      <div class="card-header" id="headingOne">
+         <h5 class="mb-0">
+            <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            Bootstrap navbar #1 
+            </button>
+         </h5>
+      </div>
+      <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+         <div class="card-body">
+            <nav class="navbar navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">Never expand</a>
+            <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarsExample01" aria-controls="navbarsExample01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse" id="navbarsExample01">
+               <ul class="navbar-nav mr-auto">
+                  <li class="nav-item active">
+                     <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="#">Link</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link disabled" href="#">Disabled</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                     <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                     <div class="dropdown-menu" aria-labelledby="dropdown01">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                     </div>
+                  </li>
+               </ul>
+               <form class="form-inline my-2 my-md-0">
+                  <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+               </form>
+            </div>
+         </div>
+      </div>
+      <div class="card">
+      <div class="card-header" id="headingTwo">
+         <h5 class="mb-0">
+            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            Bootstrap navbar #2
+            </button>
+         </h5>
+      </div>
+      <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+         <div class="card-body">
+            <nav class="navbar navbar-expand navbar-dark bg-dark">
+               <a class="navbar-brand" href="#">Always expand</a>
+               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample02" aria-controls="navbarsExample02" aria-expanded="false" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+               </button>
+               <div class="collapse navbar-collapse" id="navbarsExample02">
+                  <ul class="navbar-nav mr-auto">
+                     <li class="nav-item active">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                     </li>
+                  </ul>
+                  <form class="form-inline my-2 my-md-0">
+                     <input class="form-control" type="text" placeholder="Search">
+                  </form>
+               </div>
+            </nav>
+         </div>
+      </div>
+      <div class="card">
+         <div class="card-header" id="headingThree">
+            <h5 class="mb-0">
+               <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+               Bootstrap navbar #3
+               </button>
+            </h5>
+         </div>
+         <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+            <div class="card-body">
+               <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                  <div class="container">
+                     <a class="navbar-brand" href="#">Container</a>
+                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
+                     <span class="navbar-toggler-icon"></span>
+                     </button>
+                     <div class="collapse navbar-collapse" id="navbarsExample07">
+                        <ul class="navbar-nav mr-auto">
+                           <li class="nav-item active">
+                              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                           </li>
+                           <li class="nav-item">
+                              <a class="nav-link" href="#">Link</a>
+                           </li>
+                           <li class="nav-item">
+                              <a class="nav-link disabled" href="#">Disabled</a>
+                           </li>
+                           <li class="nav-item dropdown">
+                              <a class="nav-link dropdown-toggle" href="#" id="dropdown07" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                              <div class="dropdown-menu" aria-labelledby="dropdown07">
+                                 <a class="dropdown-item" href="#">Action</a>
+                              </div>
+                           </li>
+                        </ul>
+                        <form class="form-inline my-2 my-md-0">
+                           <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+                        </form>
+                     </div>
+                  </div>
+               </nav>
+            </div>
+		 </div>
+		 <div class="card">
+			<div class="card-header" id="headingFour">
+				<h5 class="mb-0">
+				   <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+					Bootstrap navbar #4
+					</button>
+				  </h5>
+			</div>
+			<div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+				  <div class="card-body">
+					<nav class="navbar navbar-expand-lg navbar-light bg-light rounded">
+						<a class="navbar-brand" href="#">Navbar</a>
+						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
+						  <span class="navbar-toggler-icon"></span>
+						</button>
+				
+						<div class="collapse navbar-collapse" id="navbarsExample09">
+						  <ul class="navbar-nav mr-auto">
+							<li class="nav-item active">
+							  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+							</li>
+							<li class="nav-item">
+							  <a class="nav-link" href="#">Link</a>
+							</li>
+							<li class="nav-item">
+							  <a class="nav-link disabled" href="#">Disabled</a>
+							</li>
+							<li class="nav-item dropdown">
+							  <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown09" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+							  <div class="dropdown-menu" aria-labelledby="dropdown09">
+								<a class="dropdown-item" href="#">Action</a>
+								<a class="dropdown-item" href="#">Another action</a>
+								<a class="dropdown-item" href="#">Something else here</a>
+							  </div>
+							</li>
+						  </ul>
+						  <form class="form-inline my-2 my-md-0">
+							<input class="form-control" type="text" placeholder="Search" aria-label="Search">
+						  </form>
+						</div>
+					  </nav>
+					</div>
+				</div>
+				</div>
+         </div>
+         <br>
+         <p class="text-justify"> Here you can see some examples for the navbar. 
+         <br>
+         </p>
+		</body>
+		</html>

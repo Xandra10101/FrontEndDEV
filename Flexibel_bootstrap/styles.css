@@ -1,0 +1,77 @@
+/*styles.css*/
+header{
+	background-color: white;
+	width: 100%;
+	height: auto;
+	margin: 0;
+	max-width: 100%;
+	
+}
+body{
+	background-color: limegreen;
+	max-width: 100%;
+}
+section{
+	background-color: black;
+	color: white;
+	width: 15%;
+	height: 50%;
+	position: relative;
+		top: 15px;
+		left: 0px;
+}
+article{
+	background-color: lightblue;
+	height: 50%;
+	width: 100%;
+	max-width: 100%;
+	text-align: center;
+	padding: 20px;
+}
+h1{
+	text-align: center;
+	width: auto;
+	margin: 0%;
+	font-size: 4vw;
+
+}
+h3{
+	font-size: 3vw; 
+	text-align: center;
+}
+h4{
+	font-size: 15px;
+	text-align: center;
+}
+nav{
+	background-color: beige;
+	width: 90%;
+	height: auto;
+	max-width: 100%;
+}
+nav ul{
+	height: 50%;
+	width: 50%;
+	max-width: 75%;
+}
+p{
+
+}
+div.oranje_vlak{
+	background-color: orange;
+	width: 99%;
+	height: 100%;
+	max-width: 100%;
+}
+div.roze_vlak{
+	background-color: lightpink;
+	width: 80%;
+	height: 100%;
+	margin-left: 10%;
+	margin-right:20%;
+}
+@media screen and (max-width: 800px){
+	section, article, nav{
+		width: 100%;
+	}
+}

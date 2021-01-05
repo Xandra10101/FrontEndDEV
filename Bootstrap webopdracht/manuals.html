@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- <link href="htdocs/Frontend Programmeren/Webdesign/Bootstrap webopdracht/css/bootstrap.css" rel="stylesheet"> -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<link rel="icon" sizes="16x16" href="favicon-16x16.png" type="Images/ico">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	<title>Bootstrap WEB</title>
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+	 	<a class="navbar-brand">
+    	<img src="alfa-college.png" width="50" height="50" alt="logo alfa-college">
+    	</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		    <span class="navbar-toggler-icon"></span>
+		</button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+		    <ul class="navbar-nav mr-auto">
+		      <li class="nav-item">
+		        <a class="nav-link" href="index.html">Home</a>
+		      </li>
+		      <li class="nav-item">
+		        <a class="nav-link" href="advantages.html">Advantages</a>
+		      </li>
+		      <li class="nav-item">
+		        <a class="nav-link" href="Disadvantages.html">Disadvantages</a>
+		      </li>
+		      <li class="nav-item active">
+		        <a class="nav-link" href="manuals.html">Guide<span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="examples.html">Examples</a>
+				 </li>
+		      <li class="nav-item">
+		        <a class="nav-link" href="faq.html">FAQ</a>
+		      </li>
+		    </ul>
+		    <form class="form-inline my-2 my-lg-0">
+		      	<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+		      	<button class="btn btn-outline-danger my-2 my-sm-0" type="submit">Search</button>
+		    </form>
+		</div>
+	</nav>
+
+	<div class="accordion" id="accordionExample">
+	<div class="card">
+	    <div class="card-header" id="headingOne">
+	    <h5 class="mb-0">
+	        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+	          	Install Bootstrap via BootstrapCDN
+	        </button>
+	    </h5>
+	   </div>
+
+	    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+	      	<div class="card-body">
+	        	<h6>Skip the download with BootstrapCDN to deliver cached version of Bootstrap’s compiled CSS and JS to your project.</h6>
+	        	 <p class="font-italic">
+	        	link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"
+				script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous" </p> <br>
+				<h6>If you’re using our compiled JavaScript, don’t forget to include CDN versions of jQuery and Popper.js before it.</h6> <br> <p class="font-italic">
+				script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+				script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"> </p> <br>
+
+				<h6>Don't forget the HTML tags for link and script!</h6>
+	     	</div>
+	    </div>
+	</div>
+	<div class="card">
+	    <div class="card-header" id="headingTwo">
+		    <h5 class="mb-0">
+	    	    <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+	        	  Install Bootstrap via Compiled CSS and JS
+	        	</button>
+	      	</h5>
+	    </div>
+	    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+	      	<div class="card-body">
+	        	Download ready-to-use compiled code for Bootstrap v4.3.1 to easily drop into your project, which includes: <br>
+				•	Compiled and minified CSS bundles (see CSS files comparison) <br>
+				•	Compiled and minified JavaScript plugins
+				This doesn’t include documentation, source files, or any optional JavaScript dependencies (jQuery and Popper.js). <br>
+				<a href = "https://getbootstrap.com/docs/4.3/getting-started/download/"> Download </a>
+
+	      	</div>
+	    </div>
+	</div>
+	<div class="card">
+	    <div class="card-header" id="headingThree">
+		    <h5 class="mb-0">
+	    	   <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+	          	Install Bootstrap via Package managers -> npm
+	        	</button>
+	      	</h5>
+	    </div>
+	    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+	      	<div class="card-body">
+	        Install Bootstrap in your Node.js powered apps with the npm package: <br>
+	        <p class="font-italic">
+	      	npm install bootstrap require('bootstrap')</p>
+			will load all of Bootstrap’s jQuery plugins onto the jQuery object. The bootstrap module itself does not export anything. You can manually load Bootstrap’s jQuery plugins individually by loading the /js/*.js files under the package’s top-level directory. <br>
+			Bootstrap’s package.json contains some additional metadata under the following keys: <br>
+			•	sass - path to Bootstrap’s main Sass source file <br>
+			•	style - path to Bootstrap’s non-minified CSS that’s been precompiled using the default settings (no customization)
+
+	    	</div>
+	   	</div>
+	</div>
+	<div class="card">
+	    <div class="card-header" id="headingFour">
+		    <h5 class="mb-0">
+	    	   <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+	          	Install Bootstrap via Package managers -> RubyGems
+	        	</button>
+	      	</h5>
+	    </div>
+	    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+	      	<div class="card-body">
+	        Install Bootstrap in your Ruby apps using Bundler (recommended) and RubyGems by adding the following line to your Gemfile:<br>
+	        <p class="font-italic">
+	       	gem 'bootstrap', '~> 4.3.1'</p>
+			 <br>
+			Alternatively, if you’re not using Bundler, you can install the gem by running this command: <br>
+			<p class="font-italic">
+	       	gem install bootstrap -v 4.3.1</p>
+			
+			See the gem’s README for further details.
+
+	    	</div>
+	   	</div>
+	</div>
+	<div class="card">
+	    <div class="card-header" id="headingFive">
+		    <h5 class="mb-0">
+	    	   <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+	          	Install Bootstrap via Package managers -> Composer
+	        	</button>
+	      	</h5>
+	    </div>
+	    <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
+	      	<div class="card-body">
+	        You can also install and manage Bootstrap’s Sass and JavaScript using Composer: <br>
+	        <p class="font-italic">
+	        composer require twbs/bootstrap:4.3.1</p>
+			
+			
+
+	    	</div>
+	   	</div>
+	</div>
+	<div class="card">
+	    <div class="card-header" id="headingSix">
+		    <h5 class="mb-0">
+	    	   <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+	          	Install Bootstrap via Package managers -> NuGet
+	        	</button>
+	      	</h5>
+	    </div>
+	    <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordionExample">
+	      	<div class="card-body">
+	        If you develop in .NET, you can also install and manage Bootstrap’s CSS or Sass and JavaScript using NuGet: <br>
+	        <p class="font-italic">
+	        Install-Package bootstrap <br>
+			Install-Package bootstrap.sass</p>
+			
+ 
+	    	</div>
+	   	</div>
+	</div>
+	<div class="card">
+	    <div class="card-header" id="headingSeven">
+		    <h5 class="mb-0">
+	    	   <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+	          	Other options for installing Bootstrap
+	        	</button>
+	      	</h5>
+	    </div>
+	    <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordionExample">
+	      	<div class="card-body">
+	        •	Download the latest release. <br>
+					•	Clone the repo: <p class="font-italic"> git clone https://github.com/twbs/bootstrap.git </p>
+					•	Install with yarn: <p class="font-italic">yarn add bootstrap@4.3.1.</p>
+	    	</div>
+	   	</div>
+	</div>
+	</div>
+	<br>
+	<h6 style="text-align:center;">For those who like to follow a video for instruction on installing Bootstrap, there is the video below.</h6>
+	<br>
+	<h6 style="text-align:center;"> Installing the newer or older versions of Bootstrap. Just edit the numbers after the 4 with your preferable version number.</h6>
+
+	<div class="embed-responsive embed-responsive-21by9">
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/ap1_6SIQbQg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	</div>
+
+
+
+
+</body>
+</html>
+
+
